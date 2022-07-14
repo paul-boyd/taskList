@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="toDoApp.css">
+        <title>Paul's To Do App</title>
+        <script src="toDoApp.js" defer></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+        
+    
+    <body>
+        <header>
+            <section class="heading">
+                <h1 class="title">Task List</h1>
+                <button class="sort">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <button class="clear">
+                    <ion-icon name="refresh-outline"></ion-icon>
+                </button>
+            </section>
+        </header>
+
+        <button class="create">
+            <ion-icon name="add-outline"></ion-icon>
+        </button>
+
+        <button class="createBigger">
+            <ion-icon name="add-outline"></ion-icon>
+        </button>
+
+        <section class="createToDo">
+            <form id="newForm">
+                <div class="close">+</div>
+                <p class="newFormHeader">Task*</p>
+                <input 
+                    type="text"
+                    name="content"
+                    id="content"
+                    placeholder="New task here"
+                    required
+                    maxlength="150"
+                    autocomplete="off">
+                <p class="newFormHeader">Date</p>
+                <input 
+                    type="date" 
+                    name="dueDate" 
+                    id="dueDate">
+                <p class="newFormHeader">Time</p>
+                <input 
+                    type="time" 
+                    name="dueTime" 
+                    id="dueTime">
+                <input class="submit" type="submit" value="+">
+            </form>
+        </section>
+
+        <main class="app">
+            <section class="listArea">
+                <div class="list" id="list">
+
+                </div>
+            </section>
+        </main>
+
+    </body>
+</html>
